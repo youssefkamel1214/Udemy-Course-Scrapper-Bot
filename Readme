@@ -1,0 +1,55 @@
+# 🎓 Udemy Course Scrapper Bot (UiPath Project)
+
+A UiPath automation bot that scrapes course data from Udemy based on user input. This project demonstrates how robotic process automation (RPA) can be used to interact with dynamic websites, extract structured data, and apply logic like sorting and filtering—all without writing traditional code.
+
+## 📌 Project Overview
+
+The bot prompts the user to enter a course topic and the number of courses to retrieve. It then searches Udemy, opens each course page individually, extracts relevant details, sorts the courses by price, and saves the cheapest course to a `.txt` file. This project showcases UiPath’s capabilities in browser automation, data handling, and user interaction.
+
+## 🚀 Features
+
+- 🧑‍💻 Prompts user for course topic and number of results
+- 🌐 Searches Udemy and opens individual course pages
+- 📋 Extracts course title, price, and other metadata
+- 📊 Sorts retrieved courses by price (ascending)
+- 📝 Outputs the cheapest course to a `.txt` file
+##  Project Structure
+
+```sh
+└── Udemy-Course-Scrapper-Bot/
+    ├── Browser
+    │   ├── Scrap_Course_Data.xaml
+    │   └── SearchCourseOnBrowser.xaml
+    ├── Input
+    │   ├── Taking_Input.xaml
+    │   └── YesNO_Question.xaml
+    ├── Main.xaml
+    ├── Main_Flow.xaml
+    ├── Output
+    │   ├── UI.txt
+    │   ├── python.txt
+    │   └── sql.txt
+    ├── Txt
+    │   └── SaveToTxt.xaml
+    └── project.json
+```
+
+## 🎯 Input
+
+- **Course name/topic** (e.g., “Flutter”, “Android”, “Python”)
+- **Number of courses** to retrieve (e.g., 5, 10, etc.)
+
+## 📤 Output
+
+- **Text file** containing details of the cheapest course
+  - Format: `CourseName | Price | URL`
+  - Filename: `CheapestCourse.txt`
+- **Execution logs** visible in UiPath Studio
+
+## 🛠️ How to Run
+
+1. Open UiPath Studio.
+2. Clone or download this repository.
+3. Open the project folder.
+4. Run `Main_Flow.xaml`.
+5. Enter the course topic and number of courses when prompted
